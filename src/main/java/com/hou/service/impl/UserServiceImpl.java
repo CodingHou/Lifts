@@ -4,10 +4,12 @@ import com.hou.dao.IUserDao;
 import com.hou.dao.impl.UserDaoImpl;
 import com.hou.model.User;
 import com.hou.service.IUserService;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by houchao on 2017/1/9.
  */
+@Service("userService")
 public class UserServiceImpl implements IUserService {
     private IUserDao userDao;
 

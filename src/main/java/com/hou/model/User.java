@@ -1,48 +1,43 @@
 package com.hou.model;
 
-/**
- * Created by houchao on 2017/1/9.
- */
 public class User {
-    private int id;
-    private String name;
-    private String password;
+    private Integer id;
 
-    public User(String name, String password, int id) {
-        this.name = name;
-        this.password = password;
-        this.id = id;
-    }
+    private String userName;
 
-    public User(String name, String password) {
-        this.name = name;
-        this.password = password;
-    }
+    private String userPhone;
 
-    public User() {
-    }
+    private String openId;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone == null ? null : userPhone.trim();
+    }
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId == null ? null : openId.trim();
     }
 }
