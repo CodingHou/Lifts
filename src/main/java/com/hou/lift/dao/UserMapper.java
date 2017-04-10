@@ -1,7 +1,7 @@
-package com.hou.mapper;
+package com.hou.lift.dao;
 
-import com.hou.model.User;
-import com.hou.model.UserExample;
+import com.hou.lift.model.User;
+import com.hou.lift.model.UserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

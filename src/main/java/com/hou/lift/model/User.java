@@ -1,4 +1,4 @@
-package com.hou.model;
+package com.hou.lift.model;
 
 public class User {
     private Integer id;

@@ -1,16 +1,16 @@
-package com.hou.model;
+package com.hou.lift.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonExample {
+public class UserExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public PersonExample() {
+    public UserExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,133 +164,213 @@ public class PersonExample {
             return (Criteria) this;
         }
 
-        public Criteria andAgeIsNull() {
-            addCriterion("age is null");
+        public Criteria andUserNameIsNull() {
+            addCriterion("user_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andAgeIsNotNull() {
-            addCriterion("age is not null");
+        public Criteria andUserNameIsNotNull() {
+            addCriterion("user_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andAgeEqualTo(Integer value) {
-            addCriterion("age =", value, "age");
+        public Criteria andUserNameEqualTo(String value) {
+            addCriterion("user_name =", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotEqualTo(Integer value) {
-            addCriterion("age <>", value, "age");
+        public Criteria andUserNameNotEqualTo(String value) {
+            addCriterion("user_name <>", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeGreaterThan(Integer value) {
-            addCriterion("age >", value, "age");
+        public Criteria andUserNameGreaterThan(String value) {
+            addCriterion("user_name >", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("age >=", value, "age");
+        public Criteria andUserNameGreaterThanOrEqualTo(String value) {
+            addCriterion("user_name >=", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLessThan(Integer value) {
-            addCriterion("age <", value, "age");
+        public Criteria andUserNameLessThan(String value) {
+            addCriterion("user_name <", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeLessThanOrEqualTo(Integer value) {
-            addCriterion("age <=", value, "age");
+        public Criteria andUserNameLessThanOrEqualTo(String value) {
+            addCriterion("user_name <=", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeIn(List<Integer> values) {
-            addCriterion("age in", values, "age");
+        public Criteria andUserNameLike(String value) {
+            addCriterion("user_name like", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotIn(List<Integer> values) {
-            addCriterion("age not in", values, "age");
+        public Criteria andUserNameNotLike(String value) {
+            addCriterion("user_name not like", value, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeBetween(Integer value1, Integer value2) {
-            addCriterion("age between", value1, value2, "age");
+        public Criteria andUserNameIn(List<String> values) {
+            addCriterion("user_name in", values, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andAgeNotBetween(Integer value1, Integer value2) {
-            addCriterion("age not between", value1, value2, "age");
+        public Criteria andUserNameNotIn(List<String> values) {
+            addCriterion("user_name not in", values, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andGenderIsNull() {
-            addCriterion("gender is null");
+        public Criteria andUserNameBetween(String value1, String value2) {
+            addCriterion("user_name between", value1, value2, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andGenderIsNotNull() {
-            addCriterion("gender is not null");
+        public Criteria andUserNameNotBetween(String value1, String value2) {
+            addCriterion("user_name not between", value1, value2, "userName");
             return (Criteria) this;
         }
 
-        public Criteria andGenderEqualTo(String value) {
-            addCriterion("gender =", value, "gender");
+        public Criteria andUserPhoneIsNull() {
+            addCriterion("user_phone is null");
             return (Criteria) this;
         }
 
-        public Criteria andGenderNotEqualTo(String value) {
-            addCriterion("gender <>", value, "gender");
+        public Criteria andUserPhoneIsNotNull() {
+            addCriterion("user_phone is not null");
             return (Criteria) this;
         }
 
-        public Criteria andGenderGreaterThan(String value) {
-            addCriterion("gender >", value, "gender");
+        public Criteria andUserPhoneEqualTo(String value) {
+            addCriterion("user_phone =", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderGreaterThanOrEqualTo(String value) {
-            addCriterion("gender >=", value, "gender");
+        public Criteria andUserPhoneNotEqualTo(String value) {
+            addCriterion("user_phone <>", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderLessThan(String value) {
-            addCriterion("gender <", value, "gender");
+        public Criteria andUserPhoneGreaterThan(String value) {
+            addCriterion("user_phone >", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderLessThanOrEqualTo(String value) {
-            addCriterion("gender <=", value, "gender");
+        public Criteria andUserPhoneGreaterThanOrEqualTo(String value) {
+            addCriterion("user_phone >=", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderLike(String value) {
-            addCriterion("gender like", value, "gender");
+        public Criteria andUserPhoneLessThan(String value) {
+            addCriterion("user_phone <", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderNotLike(String value) {
-            addCriterion("gender not like", value, "gender");
+        public Criteria andUserPhoneLessThanOrEqualTo(String value) {
+            addCriterion("user_phone <=", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderIn(List<String> values) {
-            addCriterion("gender in", values, "gender");
+        public Criteria andUserPhoneLike(String value) {
+            addCriterion("user_phone like", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderNotIn(List<String> values) {
-            addCriterion("gender not in", values, "gender");
+        public Criteria andUserPhoneNotLike(String value) {
+            addCriterion("user_phone not like", value, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderBetween(String value1, String value2) {
-            addCriterion("gender between", value1, value2, "gender");
+        public Criteria andUserPhoneIn(List<String> values) {
+            addCriterion("user_phone in", values, "userPhone");
             return (Criteria) this;
         }
 
-        public Criteria andGenderNotBetween(String value1, String value2) {
-            addCriterion("gender not between", value1, value2, "gender");
+        public Criteria andUserPhoneNotIn(List<String> values) {
+            addCriterion("user_phone not in", values, "userPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserPhoneBetween(String value1, String value2) {
+            addCriterion("user_phone between", value1, value2, "userPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andUserPhoneNotBetween(String value1, String value2) {
+            addCriterion("user_phone not between", value1, value2, "userPhone");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdIsNull() {
+            addCriterion("open_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdIsNotNull() {
+            addCriterion("open_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdEqualTo(String value) {
+            addCriterion("open_id =", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdNotEqualTo(String value) {
+            addCriterion("open_id <>", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdGreaterThan(String value) {
+            addCriterion("open_id >", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdGreaterThanOrEqualTo(String value) {
+            addCriterion("open_id >=", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdLessThan(String value) {
+            addCriterion("open_id <", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdLessThanOrEqualTo(String value) {
+            addCriterion("open_id <=", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdLike(String value) {
+            addCriterion("open_id like", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdNotLike(String value) {
+            addCriterion("open_id not like", value, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdIn(List<String> values) {
+            addCriterion("open_id in", values, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdNotIn(List<String> values) {
+            addCriterion("open_id not in", values, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdBetween(String value1, String value2) {
+            addCriterion("open_id between", value1, value2, "openId");
+            return (Criteria) this;
+        }
+
+        public Criteria andOpenIdNotBetween(String value1, String value2) {
+            addCriterion("open_id not between", value1, value2, "openId");
             return (Criteria) this;
         }
     }
