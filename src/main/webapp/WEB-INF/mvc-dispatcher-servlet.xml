@@ -28,12 +28,13 @@
         <property name="location" value="classpath:jdbc.properties" />
     </bean>
 
-    <bean id="dataSource" class="org.apache.commons.jdbc.BasicDataSource"
+    <!--使用c3p0数据源进行配置-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/mysql" />
-        <property name="username" value="root" />
-        <property name="password" value="123456" />
+        <property name="driverClass" value="${jdbc.driver_class}" />
+        <property name="jdbcUrl" value="${jdbc.url}" />
+        <property name="user" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
         <!--&lt;!&ndash; 初始化连接大小 &ndash;&gt;-->
         <!--<property name="initialSize" value="${initialSize}"></property>-->
         <!--&lt;!&ndash; 连接池最大数量&ndash;&gt;-->
@@ -50,13 +51,13 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- 自动扫描mapping.xml文件 -->
-        <property name="mapperLocations" value="classpath:com/hou/lift/dao"></property>
+        <property name="mapperLocations" value="classpath*:com/hou/lift/mapper"/>
     </bean>
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.dcits.dao" />
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="basePackage" value="com.hou.lift.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
 </beans>

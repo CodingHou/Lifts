@@ -3,11 +3,9 @@ package com.hou.lift.model;
 public class User {
     private Integer id;
 
-    private String userName;
+    private String name;
 
-    private String userPhone;
-
-    private String openId;
+    private String gender;
 
     public Integer getId() {
         return id;
@@ -17,27 +15,19 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
-    public String getUserPhone() {
-        return userPhone;
+    public String getGender() {
+        return gender;
     }
 
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone == null ? null : userPhone.trim();
-    }
-
-    public String getOpenId() {
-        return openId;
-    }
-
-    public void setOpenId(String openId) {
-        this.openId = openId == null ? null : openId.trim();
+    public void setGender(String gender) {
+        this.gender = gender == null ? null : gender.trim();
     }
 }
