@@ -1,4 +1,4 @@
-package com.hou.lift.model;
+package com.hou.lift.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

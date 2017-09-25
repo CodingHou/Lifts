@@ -107,7 +107,22 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.25-incubating</version>
         </dependency>
-
+        <!-- Swagger -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-core</artifactId>
+            <version>1.5.8</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.4.0</version>
+        </dependency>
     </dependencies>
 
 
@@ -118,7 +133,7 @@
             <!--<plugin>-->
                 <!--<groupId>org.apache.maven.plugins</groupId>-->
                 <!--<artifactId>maven-compiler-plugin</artifactId>-->
-                <!--<configuration>-->
+                <!--<confixguration>-->
                     <!--<source>1.8</source>-->
                     <!--<target>1.8</target>-->
                 <!--</configuration>-->
@@ -128,6 +143,16 @@
 
     <!--</build>-->
     <build>
+        <resources>
+            <resource>
+                <!--此处配置到java是因为mapper.xml文件在java目录-->
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>

@@ -1,4 +1,4 @@
-package com.cl.roadshow.config;
+package com.hou.lift.config;
 
 /**
  * Created by lincoln on 3/23/16.
@@ -20,7 +20,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.cl.roadshow.controller")
+@ComponentScan(basePackages = "com.hou.lift.controller")
 public class SwaggerWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {
 
 

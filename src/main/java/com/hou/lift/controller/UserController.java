@@ -5,15 +5,16 @@ import com.hou.lift.service.IUserService;
 import com.hou.lift.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by houchao on 2016/12/29.
  */
-@Controller
-public class MainController {
+@CrossOrigin
+@RestController
+public class UserController {
 
     @Autowired
     private IUserService userService;
@@ -23,17 +24,21 @@ public class MainController {
         return "index";
     }
 
-    private IUserService service = new UserServiceImpl();
-//    @RequestMapping(value = "/", method = RequestMethod.GET)
-//    public String index( User user) {
-//        return "index";
-//    }
 
     @RequestMapping(value ="/toJson",method=RequestMethod.POST)
     @ResponseBody
     public User toJson(User user){
-        service.addUser(user); //一起测试了
-        User user2 = service.findUserById(2);
-        return user2;
+         user = userService.findUserById(2);
+        return user;
     }
+
+    @RequestMapping(value = "/users",method = RequestMethod.GET)
+    public User findUserByName(@RequestParam(value = "id",required = false,defaultValue = "")Integer id){
+        if (null == id) {
+            id = 1;
+        }
+        return userService.findUserById(id);
+
+    }
+
 }
