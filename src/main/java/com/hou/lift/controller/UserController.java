@@ -5,6 +5,7 @@ import com.hou.lift.service.IUserService;
 import com.hou.lift.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by houchao on 2016/12/29.
  */
-@CrossOrigin
+//@CrossOrigin
 @RestController
 public class UserController {
 
@@ -33,11 +34,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/users",method = RequestMethod.GET)
-    public User findUserByName(@RequestParam(value = "id",required = false,defaultValue = "")Integer id){
+    public User findUserByName(@RequestParam(value = "id",required = false,defaultValue = "")Integer id, ModelMap modelMap){
         if (null == id) {
             id = 1;
         }
-        return userService.findUserById(id);
+        User user =userService.findUserById(id);
+        return user;
 
     }
 
